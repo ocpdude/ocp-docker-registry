@@ -1,0 +1,28 @@
+# OCS Dynamic Block Storage
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: registry-data-pvc
+  namespace: docker-registry
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: ocs-storagecluster-cephfs
+  # s3:
+  #   accesskey: awsaccesskey
+  #   secretkey: awssecretkey
+  #   region: us-west-1
+  #   regionendpoint: http://myobjects.local
+  #   bucket: bucketname
+  #   encrypt: true
+  #   keyid: mykeyid
+  #   secure: true
+  #   v4auth: true
+  #   chunksize: 5242880
+  #   multipartcopychunksize: 33554432
+  #   multipartcopymaxconcurrency: 100
+  #   multipartcopythresholdsize: 33554432
+  #   rootdirectory: /s3/object/name/prefix
