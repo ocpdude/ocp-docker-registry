@@ -1,4 +1,4 @@
-# OCS Dynamic Block Storage
+# OCS Dynamic CephFS Storage
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
